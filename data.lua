@@ -41,7 +41,7 @@ if mods["Mining_Drones"] then
     icon_size = 256,
     order = "a",
     upgrade = false,
-    prerequisites = {"advanced-electronics", "mining-productivity-1"},
+    prerequisites = {"modules", "mining-productivity-1"},
     effects = {
       {
         type = "unlock-recipe",
@@ -100,6 +100,20 @@ if mods["Updated_Construction_Drones"] then
   RECIPE("Construction Drone"):add_ingredient({type = "item", name = "electric-motor", amount = 2})
 end
 
+-- Update AAI Vehicles
+if mods["aai-programmable-vehicles"] and mods["aai-vehicles-miner"] then
+  TECHNOLOGY("basic-vehicles")
+    :add_prereq("logistics")
+    :add_prereq("circuit-network")
+
+  TECHNOLOGY("vehicle-miner")
+    :add_prereq("logistics")
+    :add_prereq("circuit-network")
+
+  TECHNOLOGY("position-beacon")
+    :add_prereq("basic-vehicles")
+
+end
 
 -- Update AAI Ironclad
 if mods["aai-vehicles-ironclad"] and mods["cargo-ships"] then
@@ -142,6 +156,19 @@ end
 -- Update RampantArsenal
 if mods["RampantArsenal"] then
   RECIPE("rifle-item-rampant-arsenal"):add_ingredient({type = "item", name = "motor", amount = 1})
+end
+
+-- Update Crafting Research Speed
+if mods["Crafting_Speed_Research"] then
+  TECHNOLOGY("crafting-speed-upgrade-1")
+    :add_pack("logistic-science-pack")
+    :add_prereq("modules")
+
+  TECHNOLOGY("crafting-speed-upgrade-2")
+    :add_pack("logistic-science-pack")
+
+  TECHNOLOGY("crafting-speed-upgrade-3")
+    :add_pack("logistic-science-pack")
 end
 
 -- data.raw.item["torch"]["electric_energy_source_prototype"]["buffer_capacity"] = "100kW"

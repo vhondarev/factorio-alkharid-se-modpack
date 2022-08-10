@@ -2,6 +2,9 @@
 Version: 0.3.0
 Date: 8/10/2022
   Changes:
+    AAI Vehicles:
+      - added "circuit-network" dependency to "basic-vehicles" and "vehicle-miner"
+
     Kombat Drones:
       - added dependency "logistics-2", "fast-inserter", "advanced-electronics", "military-science" to "infantry-depot" tech and removed military-1 dependency
       - added "military-science-pack" to all infantry technologies
@@ -18,6 +21,10 @@ Date: 8/10/2022
 
     Hovercraft:
       - added dependency "water-transport"
+
+    Crafting_Speed_Research:
+      - added dependency tech "modules"
+      - added "logistic-science-pack" to all
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 8/10/2022
