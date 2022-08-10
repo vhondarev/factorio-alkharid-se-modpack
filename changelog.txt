@@ -1,0 +1,44 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 8/10/2022
+  Changes:
+    Kombat Drones:
+      - "infantry-depot" tech added "logistic-science-pack" ingredient
+      - "infantry-depot" added "electronic-circuit" ingredient (x10)
+      - "infantry-depot" added "transport-belt" ingredient (x10)
+      - "infantry-depot" added "inserter" ingredient (x10)
+      - "basic-infantry" added "electronic-circuit" ingredient (x2)
+      - "heavy-infantry" added "advanced-circuit" ingredient (x2)
+      - "power-infantry" added "processing-unit" ingredient (x2)
+
+    Mining Drones:
+      - mining depot added "electronic-circuit" ingredient (x10)
+      - mining drone added "electric-motor" ingredient (x1)
+
+    Transport Drones:
+      - "request-depot", "supply-depot", "fuel-depot", "fluid-depot", "buffer-depot" added "electronic-circuit" ingredient (x5)
+      - "mining-depot" added "electronic-circuit" ingredient (x1)
+
+    Construction Drones:
+      - "construction_drone" added "electric-motor" ingredient (x1)
+
+    AAI vehicle + CargoShip/Hovercraft/Aircraft:
+      - added tech dependency "water-transport" and removed "automobilism" for "ironclad" tech
+      - added tech dependency "robotics" and removed "automobilism" for "hovercraft" tech
+      - added tech dependency "robotics", "rocket-fuel" and removed "automobilism" for "aerodynamics" tech
+
+    Larger Lamp:
+      - added "glass" as dependency ingredient
+
+    Miniloader:
+      - "chute" added burner inserter ingredient (x2)
+
+    Rampant arsenal:
+      - "riffle-turret" added motor ingredient (x1)
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 8/8/2022
+  Changes:
+    - Init mod dependency
+---------------------------------------------------------------------------------------------------
