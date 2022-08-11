@@ -1,4 +1,4 @@
-# Space Exploration Alkharid Experience Mod Pack
+# Space Experience Mod Pack
 
 ## Modpack Features
 - Cosmos gameplay
@@ -28,4 +28,4 @@ Also this mod include some adaptation tweaks to mods to make them more logical a
 - [Aircraft](https://mods.factorio.com/mod/Aircraft) and supporting mods (Aircraft Realism, Better Cargo Planes)
 - [Train Construction](https://mods.factorio.com/mod/trainConstructionSite)
 - [Night Brightness](https://mods.factorio.com/mod/NightBrightness) and other mods to support darker nights (RealisticFlashlight, DeadlockLargerLamp, Concrete_Lamppost_v11)
-- Additional utility mods in optional dependency
+- Additional utility mods in dependency

@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 8/11/2022
+  Changes:
+    AAI Vehicles:
+    - added "iron-gear-wheel" ingredient to "basic-vehicles", "vehicle-miner", "vehicle-chaingunner"
+    - added "steel-plate" ingredient "vehicle-chaingunner"
+    - added "steel-processing" tech dependency to "vehicle-chaingunner"
+    - added "boat" ingredient to "ironclad"
+    - increased tech value for "basic-vehicles", "vehicle-miner", "vehicle-chaingunner"
+  Larger Lamp:
+    - increased "glass" ingredient
+  Ironclad:
+    - added "advanced-circuit" ingredient
+  Hovercraft:
+      - added dependency "boat"
+      - added "flying-robot-frame" and "advanced-circuit" ingredients
+  RampantArsenal:
+    - added "electronics" tech dependency to "gun-turret" and "electronic-circuit" to ingredients
+    - increased "gun-turret" tech price
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
 Date: 8/10/2022
   Changes:

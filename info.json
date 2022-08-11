@@ -1,7 +1,7 @@
 {
   "name": "se-alkharid-mod-pack",
-  "version": "0.3.0",
-  "title": "Space Exploration Alkharid's mod pack",
+  "version": "0.4.0",
+  "title": "Space Experience mod pack",
   "description": "Package of mods and tweaks for Space Exploration experience",
   "author": "Alkharid",
   "dependencies": [

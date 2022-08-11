@@ -103,15 +103,29 @@ end
 -- Update AAI Vehicles
 if mods["aai-programmable-vehicles"] and mods["aai-vehicles-miner"] then
   TECHNOLOGY("basic-vehicles")
+    :replace_pack("automation-science-pack", "automation-science-pack", 5)
     :add_prereq("logistics")
     :add_prereq("circuit-network")
 
   TECHNOLOGY("vehicle-miner")
+    :replace_pack("automation-science-pack", "automation-science-pack", 5)
     :add_prereq("logistics")
     :add_prereq("circuit-network")
 
   TECHNOLOGY("position-beacon")
     :add_prereq("basic-vehicles")
+
+  TECHNOLOGY("vehicle-chaingunner")
+    :replace_pack("automation-science-pack", "automation-science-pack", 10)
+    :add_prereq("steel-processing")
+
+  RECIPE("basic-vehicles")
+    :add_ingredient({type = "item", name = "iron-gear-wheel", amount = 12})
+  RECIPE("vehicle-miner")
+    :add_ingredient({type = "item", name = "iron-gear-wheel", amount = 8})
+  RECIPE("vehicle-chaingunner")
+    :add_ingredient({type = "item", name = "iron-gear-wheel", amount = 16})
+    :add_ingredient({type = "item", name = "steel-plate", amount = 4})
 
 end
 
@@ -120,6 +134,9 @@ if mods["aai-vehicles-ironclad"] and mods["cargo-ships"] then
   TECHNOLOGY("ironclad")
     :remove_prereq("automobilism")
     :add_prereq("water_transport")
+
+  RECIPE("ironclad")
+    :add_ingredient({type = "item", name = "advanced-circuit", amount = 6})
 end
 
 -- Update Hovercrafts
@@ -128,6 +145,11 @@ if mods["Hovercrafts"] and mods["cargo-ships"] then
     :remove_prereq("automobilism")
     :add_prereq("robotics")
     :add_prereq("water_transport")
+
+  RECIPE("hcraft-recipe")
+    :add_ingredient({type = "item", name = "flying-robot-frame", amount = 2})
+    :add_ingredient({type = "item", name = "advanced-circuit", amount = 4})
+
 end
 
 -- Update Aircraft
@@ -141,9 +163,9 @@ end
 
 -- Update DeadlockLargerLamp
 if mods["DeadlockLargerLamp"] then
-  RECIPE("deadlock-copper-lamp"):add_ingredient({type = "item", name = "glass", amount = 1})
+  RECIPE("deadlock-copper-lamp"):add_ingredient({type = "item", name = "glass", amount = 2})
   RECIPE("deadlock-floor-lamp"):add_ingredient({type = "item", name = "glass", amount = 1})
-  RECIPE("deadlock-large-lamp"):add_ingredient({type = "item", name = "glass", amount = 2})
+  RECIPE("deadlock-large-lamp"):add_ingredient({type = "item", name = "glass", amount = 6})
 end
 
 
@@ -156,6 +178,12 @@ end
 -- Update RampantArsenal
 if mods["RampantArsenal"] then
   RECIPE("rifle-item-rampant-arsenal"):add_ingredient({type = "item", name = "motor", amount = 1})
+
+  TECHNOLOGY("gun-turret")
+    :replace_pack("automation-science-pack", "automation-science-pack", 5)
+    :add_prereq("electronics")
+
+  RECIPE("gun-turret"):add_ingredient({type = "item", name = "electronic-circuit", amount = 1})
 end
 
 -- Update Crafting Research Speed
@@ -171,11 +199,9 @@ if mods["Crafting_Speed_Research"] then
     :add_pack("logistic-science-pack")
 end
 
--- data.raw.item["torch"]["electric_energy_source_prototype"]["buffer_capacity"] = "100kW"
--- data.raw.item["torch"]["energy_usage"] = "37.8kW"
--- data.raw.item["torch"]["energy_usage"] = "1TW"
--- data.raw.item["torch"]["energy_consumption"] = "100MW"
--- data.raw.item["torch"]["fuel_inventory_size"] = 0
+
+-- data.raw.torch.torch["energy_usage"] = "37.8kW"
+-- data.raw.torch.torch["energy_consumption"] = "100MW"
 
 -- energy_usage = "37.8kW",
 -- energy_consumption = "1.8MW",
