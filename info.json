@@ -45,6 +45,7 @@
     "miniloader >= 1.15.6",
     "Robot_Battery_Research >= 0.2.1",
     "Crafting_Speed_Research >= 0.2.3",
+    "industrial-instruments >= 1.0.0",
     "Kruise_Kontrol >= 0.1.4",
     "Waterfill_v17 >= 1.1.0",
     "PipeVisualizer >= 1.0.4",

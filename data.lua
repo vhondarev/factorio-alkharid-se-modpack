@@ -118,15 +118,6 @@ if mods["aai-programmable-vehicles"] and mods["aai-vehicles-miner"] then
   TECHNOLOGY("vehicle-chaingunner")
     :replace_pack("automation-science-pack", "automation-science-pack", 10)
     :add_prereq("steel-processing")
-
-  RECIPE("basic-vehicles")
-    :add_ingredient({type = "item", name = "iron-gear-wheel", amount = 12})
-  RECIPE("vehicle-miner")
-    :add_ingredient({type = "item", name = "iron-gear-wheel", amount = 8})
-  RECIPE("vehicle-chaingunner")
-    :add_ingredient({type = "item", name = "iron-gear-wheel", amount = 16})
-    :add_ingredient({type = "item", name = "steel-plate", amount = 4})
-
 end
 
 -- Update AAI Ironclad
@@ -182,8 +173,6 @@ if mods["RampantArsenal"] then
   TECHNOLOGY("gun-turret")
     :replace_pack("automation-science-pack", "automation-science-pack", 5)
     :add_prereq("electronics")
-
-  RECIPE("gun-turret"):add_ingredient({type = "item", name = "electronic-circuit", amount = 1})
 end
 
 -- Update Crafting Research Speed
@@ -198,18 +187,3 @@ if mods["Crafting_Speed_Research"] then
   TECHNOLOGY("crafting-speed-upgrade-3")
     :add_pack("logistic-science-pack")
 end
-
-
--- data.raw.torch.torch["energy_usage"] = "37.8kW"
--- data.raw.torch.torch["energy_consumption"] = "100MW"
-
--- energy_usage = "37.8kW",
--- energy_consumption = "1.8MW",
--- fuel_inventory_size = 1,
--- energy_source =
---     {
---       type = "electric",
---       usage_priority = "secondary-output",
---       buffer_capacity = "1TW",
---       render_no_network_icon = false
---     }
