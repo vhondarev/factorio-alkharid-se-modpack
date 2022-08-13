@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.0
+Date: 8/12/2022
+  Changes:
+    Construction Drones:
+    - reduced initial drone number to 2
+    - added technology for ground construction drones
+    - added "small-lamp" ingredient to vehicles
+---------------------------------------------------------------------------------------------------
 Version: 0.5.0
 Date: 8/12/2022
   Changes:

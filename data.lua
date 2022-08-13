@@ -97,8 +97,35 @@ end
 
 -- Update Construction Drones
 if mods["Updated_Construction_Drones"] then
+  RECIPE("Construction Drone")
+    :set_enabled(false)
+
+  TECHNOLOGY {
+    type = "technology",
+    name = "ground-construction-drones",
+    localised_name = {"ground-construction-drones"},
+    icon = "__Updated_Construction_Drones__/data/units/construction_drone/construction_drone_technology.png",
+    icon_size = 150,
+    order = "a",
+    upgrade = false,
+    prerequisites = {"circuit-network"},
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "Construction Drone"
+      },
+    },
+    unit = {
+      count = 100,
+      ingredients = {
+        {"automation-science-pack", 1},
+      },
+      time = 30
+    }
+  }
   RECIPE("Construction Drone"):add_ingredient({type = "item", name = "electric-motor", amount = 2})
 end
+
 
 -- Update AAI Vehicles
 if mods["aai-programmable-vehicles"] and mods["aai-vehicles-miner"] then
@@ -120,15 +147,14 @@ if mods["aai-programmable-vehicles"] and mods["aai-vehicles-miner"] then
     :add_prereq("steel-processing")
 end
 
+
 -- Update AAI Ironclad
 if mods["aai-vehicles-ironclad"] and mods["cargo-ships"] then
   TECHNOLOGY("ironclad")
     :remove_prereq("automobilism")
     :add_prereq("water_transport")
-
-  RECIPE("ironclad")
-    :add_ingredient({type = "item", name = "advanced-circuit", amount = 6})
 end
+
 
 -- Update Hovercrafts
 if mods["Hovercrafts"] and mods["cargo-ships"] then
@@ -140,8 +166,8 @@ if mods["Hovercrafts"] and mods["cargo-ships"] then
   RECIPE("hcraft-recipe")
     :add_ingredient({type = "item", name = "flying-robot-frame", amount = 2})
     :add_ingredient({type = "item", name = "advanced-circuit", amount = 4})
-
 end
+
 
 -- Update Aircraft
 if mods["Aircraft"] then
