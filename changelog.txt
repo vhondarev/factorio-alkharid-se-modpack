@@ -1,6 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.0
+Date: 8/13/2022
+  Changes:
+    Construction Drones:
+    - removed hovercraft dependency (surface collision and other possible bugs)
+    - raised price to starter vehicles items
+    - changed tech dependency to kombat drones and added electric motor to all inf recipes
+---------------------------------------------------------------------------------------------------
 Version: 0.6.0
-Date: 8/12/2022
+Date: 8/13/2022
   Changes:
     Construction Drones:
     - reduced initial drone number to 2

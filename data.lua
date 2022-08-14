@@ -1,34 +1,46 @@
 require('__stdlib__/stdlib/data/data').Util.create_data_globals()
 
 
+-- Update Base Game
+TECHNOLOGY("gun-turret")
+  :replace_pack("automation-science-pack", "automation-science-pack", 5)
+  :add_prereq("electronics")
+
 -- Update Kombat Drones
 if mods["Kombat_Drones"] then
   TECHNOLOGY("infantry-depot")
     :add_pack("logistic-science-pack")
-    :add_pack("military-science-pack")
     :remove_prereq("military")
     :add_prereq("logistics-2")
     :add_prereq("fast-inserter")
     :add_prereq("advanced-electronics")
-    :add_prereq("military-science-pack")
 
   TECHNOLOGY("heavy-infantry")
     :add_pack("military-science-pack")
     :add_prereq("heavy-armor")
+    :add_prereq("military-science-pack")
 
   TECHNOLOGY("power-infantry")
     :add_pack("chemical-science-pack")
-    :add_prereq("chemical-science-pack")
     :add_prereq("modular-armor")
+    :add_prereq("military-3")
 
   RECIPE("infantry-depot")
     :add_ingredient({type = "item", name = "advanced-circuit", amount = 10})
     :add_ingredient({type = "item", name = "fast-transport-belt", amount = 10})
     :add_ingredient({type = "item", name = "fast-inserter", amount = 10})
 
-  RECIPE("basic-infantry"):add_ingredient({type = "item", name = "electronic-circuit", amount = 2})
-  RECIPE("heavy-infantry"):add_ingredient({type = "item", name = "advanced-circuit", amount = 2})
-  RECIPE("power-infantry"):add_ingredient({type = "item", name = "processing-unit", amount = 2})
+  RECIPE("basic-infantry")
+    :add_ingredient({type = "item", name = "electronic-circuit", amount = 2})
+    :add_ingredient({type = "item", name = "electric-motor", amount = 1})
+
+  RECIPE("heavy-infantry")
+    :add_ingredient({type = "item", name = "advanced-circuit", amount = 2})
+    :add_ingredient({type = "item", name = "electric-motor", amount = 2})
+
+  RECIPE("power-infantry")
+    :add_ingredient({type = "item", name = "processing-unit", amount = 2})
+    :add_ingredient({type = "item", name = "electric-engine-unit", amount = 1})
 end
 
 -- Update Mining Drones
@@ -91,7 +103,7 @@ if mods["Transport_Drones"] then
     RECIPE(depot):add_ingredient({type = "item", name = "electronic-circuit", amount = 5})
   end
 
-  RECIPE("transport-drone"):add_ingredient({type = "item", name = "electronic-circuit", amount = 1})
+  RECIPE("transport-drone"):add_ingredient({type = "item", name = "electronic-circuit", amount = 2})
 end
 
 
@@ -139,6 +151,9 @@ if mods["aai-programmable-vehicles"] and mods["aai-vehicles-miner"] then
     :add_prereq("logistics")
     :add_prereq("circuit-network")
 
+  TECHNOLOGY("vehicle-miner-2")
+    :add_pack("logistic-science-pack")
+
   TECHNOLOGY("position-beacon")
     :add_prereq("basic-vehicles")
 
@@ -153,19 +168,6 @@ if mods["aai-vehicles-ironclad"] and mods["cargo-ships"] then
   TECHNOLOGY("ironclad")
     :remove_prereq("automobilism")
     :add_prereq("water_transport")
-end
-
-
--- Update Hovercrafts
-if mods["Hovercrafts"] and mods["cargo-ships"] then
-  TECHNOLOGY("hcraft-tech")
-    :remove_prereq("automobilism")
-    :add_prereq("robotics")
-    :add_prereq("water_transport")
-
-  RECIPE("hcraft-recipe")
-    :add_ingredient({type = "item", name = "flying-robot-frame", amount = 2})
-    :add_ingredient({type = "item", name = "advanced-circuit", amount = 4})
 end
 
 
@@ -195,11 +197,8 @@ end
 -- Update RampantArsenal
 if mods["RampantArsenal"] then
   RECIPE("rifle-item-rampant-arsenal"):add_ingredient({type = "item", name = "motor", amount = 1})
-
-  TECHNOLOGY("gun-turret")
-    :replace_pack("automation-science-pack", "automation-science-pack", 5)
-    :add_prereq("electronics")
 end
+
 
 -- Update Crafting Research Speed
 if mods["Crafting_Speed_Research"] then

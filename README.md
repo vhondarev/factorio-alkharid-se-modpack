@@ -24,7 +24,6 @@ Also this mod include some adaptation tweaks to mods to make them more logical a
 - [Armoured Biters](https://mods.factorio.com/mod/ArmouredBiters) - new biter type
 - [Arachnids](https://mods.factorio.com/mod/Arachnids) - new sprites for aliens
 - [Cargo Ships](https://mods.factorio.com/mod/cargo-ships) - water transport
-- [Hovercraft](https://mods.factorio.com/mod/Hovercrafts) - universal land transport
 - [Aircraft](https://mods.factorio.com/mod/Aircraft) and supporting mods (Aircraft Realism, Better Cargo Planes)
 - [Train Construction](https://mods.factorio.com/mod/trainConstructionSite)
 - [Night Brightness](https://mods.factorio.com/mod/NightBrightness) and other mods to support darker nights (RealisticFlashlight, DeadlockLargerLamp, Concrete_Lamppost_v11)
