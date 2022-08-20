@@ -1,5 +1,9 @@
 require('__stdlib__/stdlib/data/data').Util.create_data_globals()
 
+local torchTable = data.raw["burner-generator"]["torch"]
+torchTable.energy_source.type = "burner"
+torchTable.max_power_output = "10kW"
+
 local vehicleAddLampList = {
   "car", "tank", "vehicle-hauler", "vehicle-miner", "vehicle-chaingunner", "vehicle-warden",
   "vehicle-flame-tank", "boat","better-cargo-plane","cargo-plane", "gunship", "jet", "flying-fortress"
